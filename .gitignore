@@ -1,0 +1,5 @@
+project/*.sqlite3
+logs/*
+.vagrant
+.idea/
+*.pyc
