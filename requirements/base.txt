@@ -1,0 +1,5 @@
+# Bleeding edge Django
+django
+south
+djangorestframework
+gunicorn
