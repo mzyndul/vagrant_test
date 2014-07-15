@@ -1,5 +1,5 @@
 """
-WSGI config for streamline project.
+WSGI config for vagrant project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

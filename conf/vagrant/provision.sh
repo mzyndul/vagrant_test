@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
 echo "Installing system packages"
-apt-get update -y
-apt-get install -y build-essential python-pip python-dev swig mc git
+#apt-get update -y
+apt-get install -y build-essential python-pip python-dev swig mc git apache2 libapache2-mod-wsgi
 
 # Dependencies for virtualenv
 apt-get install -y libjpeg8 libjpeg8-dev libtiff-dev zlib1g-dev libfreetype6-dev liblcms2-dev libxml2-dev libxslt1-dev libssl-dev
+
+cp /vagrant/conf/templates/apache.conf /etc/apache2/sites-available/000-default.conf
+apachectl restart
 
 echo "Setting up pip and virtualenv"
 pip install virtualenv

@@ -52,20 +52,21 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    # Django
     'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware'
 
-    #external
+    # External
 
-    #local
+
+    # Local
+
 )
 
-ROOT_URLCONF = 'micahel.urls'
+ROOT_URLCONF = 'michael.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
@@ -76,14 +77,16 @@ STATICFILES_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+    'django.contrib.auth',
+    'django.contrib.admin',
+
+    # Bleh Django
+    'django.contrib.contenttypes',
     'django.contrib.sites',
-    'django.contrib.flatpages',
 
     # External libs
     'rest_framework',
@@ -92,7 +95,6 @@ INSTALLED_APPS = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'registration.backends.EmailAuthBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -138,9 +140,9 @@ LOGGING = {
     }
 }
 
-LOGIN_REDIRECT_URL = 'dashboard'
 
-WSGI_APPLICATION = 'streamline.wsgi.application'
+
+WSGI_APPLICATION = 'michael.wsgi.application'
 
 DATE_FORMAT = 'j N Y'
 
