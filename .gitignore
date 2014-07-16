@@ -1,5 +1,5 @@
 project/*.sqlite3
-logs/*
+logs/*.log
 .vagrant
 .idea/
 *.pyc
