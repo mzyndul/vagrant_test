@@ -16,4 +16,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   config.vm.network :forwarded_port, guest: 80, host: 6389
   config.vm.provision :shell, :path => "conf/vagrant/provision.sh"
+  config.vm.provision "shell", inline: "service apache2 restart", run: "always"
 end
