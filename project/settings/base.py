@@ -14,8 +14,8 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 THUMBNAIL_DEBUG = DEBUG
 
-ADMINS = (
-    (u'MZ', 'mzyndul@milosolutions.com'),
+ADMINS = (,
+    
 )
 
 INTERNAL_IPS = ('127.0.0.1',)
